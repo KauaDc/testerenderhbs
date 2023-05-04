@@ -12,6 +12,6 @@
   "license": "BSD",
   "dependencies": {
     "express": "^4.7.2",
-    "express-handlebars": "^7.0.7"
+    "express-handlebars": "^6.0.6"
   }
 }
