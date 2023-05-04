@@ -1,11 +1,12 @@
 'use strict';
 
-var express = require('express'),
-    exphbs  = require('../../'); // "express-handlebars"
+var express = require('express')
+const exphbs  = require('express-handlebars'); // "express-handlebars"
 
 var app = express();
 
-app.engine('handlebars', exphbs());
+app.engine('.handlebarsapp.engine('.hbs', exphbs.engine({ extname: '.hbs', defaultLayout: "main"}));
+', exphbs.engine({defaultLayout: "main"}));
 app.set('view engine', 'handlebars');
 
 app.get('/', function (req, res) {
