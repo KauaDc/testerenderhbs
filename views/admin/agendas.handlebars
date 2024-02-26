@@ -1,8 +1,9 @@
+
 <div class="cardAgenda">
 <div class="card-body">
-<h1 class="">Agenda do dia: </h1>
-
+<h1 class="">Agenda do dia: <span name="data" id="data" ></span>  </h1>
 <form action="/admin/agenda/nova" class="col-md-6 offset-md-3  " method="post">
+<input type="hidden" id="dataAgenda" name="dataAgenda">
  <input type="hidden" name="aluno" value="{{alunos._id}}">
 
     <fieldset disabled id="cafe" >
@@ -102,3 +103,18 @@
 
 </div>
 </div>
+
+<script>
+    
+  let dataAtual = new Date();
+let dia = String(dataAtual.getDate()).padStart(2, '0');
+let mes = String(dataAtual.getMonth() + 1).padStart(2, '0'); 
+let ano = dataAtual.getFullYear();
+
+let data = `${dia}/${mes}/${ano}`
+    document.getElementById('dataAgenda').value = data
+    document.getElementById('data').innerHTML = data
+    
+
+
+</script>

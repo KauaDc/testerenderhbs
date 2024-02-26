@@ -193,7 +193,8 @@ router.post("/agenda/nova",eAdmin, (req,res)=>{
                 coco: req.body.coco,
                 quantcoco: req.body.quantcoco,
                 observacao: req.body.observacao,
-                aluno:req.body.aluno
+                aluno:req.body.aluno,
+                data: req.body.dataAgenda
             }
             new Agenda(novaAgenda).save().then(()=>{
                 Aluno.findOne({_id: req.body.aluno}).lean().then((aluno)=>{

@@ -4,20 +4,19 @@ const Schema = mongoose.Schema
 const agenda = new Schema({
 
     data:{
-        type: String,
-        default: new Date().toLocaleDateString(),
+        type: String
     },
     cafe:{
-        type: String,
+        type: String
     },
     almoco:{
-        type: String,
+        type: String
     },
     fruta:{
-        type: String,
+        type: String
     },
     lanche:{
-        type: String,
+        type: String
     },
 
     observacao:{
