@@ -1,0 +1,105 @@
+<div class="cardAgenda">
+<div class="card-body">
+<h1 class="">Agenda do dia: </h1>
+
+<form action="/admin/agendaedit" class="col-md-6 offset-md-3  " method="post">
+
+ <input type="hidden" name="id" value="{{agenda._id}}">
+
+    <fieldset disabled id="cafe" >
+        <legend>Café:<input type="checkbox"  class="form-check-input" name="cafesn" id="cafesn"></legend> 
+        <p>
+    <input type="radio" class="form-check-input" name="cafe"  value="Se alimentou bem" >
+    <label for="cafe">Se alimentou bem</label>
+        </p>
+
+        <p>
+    <input type="radio" class="form-check-input " name="cafe" value="Se alimentou moderadamente" >
+    <label for="cafe">Se alimentou moderadamente</label>
+        </p>
+
+         <p>
+    <input type="radio" class="form-check-input " name="cafe" value="Se alimentou pouco" >
+    <label for="cafe">Se alimentou pouco</label>
+        </p>
+    </fieldset>
+
+    <fieldset disabled id="almoco">
+        <legend>Almoço:<input type="checkbox"  class="form-check-input" name="almocosn" id="almocosn"></legend>
+        <p>
+        <input type="radio" class="form-check-input" name="almoco" value="Se alimentou bem">
+    <label for="almoco">Se alimentou bem</label>
+        </p>
+
+        <p>
+        <input type="radio" class="form-check-input " name="almoco" value="Se alimentou moderadamente">
+    <label for="almoco">Se alimentou moderadamente</label>
+        </p>
+
+        <p>
+        <input type="radio" class="form-check-input " name="almoco" value="Se alimentou pouco">
+    <label for="almoco">Se alimentou pouco</label>
+        </p>
+    </fieldset>
+
+
+    <fieldset disabled id="fruta">
+        <legend>Frutas:<input type="checkbox"  class="form-check-input" name="frutasn" id="frutasn"></legend>
+               <p>
+        <input type="radio" class="form-check-input" name="fruta" value="Se alimentou bem">
+    <label for="fruta">Se alimentou bem</label>
+        </p>
+
+        <p>
+        <input type="radio" class="form-check-input " name="fruta" value="Se alimentou moderadamente">
+    <label for="fruta">Se alimentou moderadamente</label>
+        </p>
+
+        <p>
+        <input type="radio" class="form-check-input " name="fruta" value="Se alimentou pouco">
+    <label for="fruta">Se alimentou pouco</label>
+        </p>
+    </fieldset>
+    <fieldset disabled id="lanche">
+        <legend>Lanche:<input type="checkbox"  class="form-check-input" name="lanchesn" id="lanchesn"></legend>
+               <p>
+        <input type="radio" class="form-check-input" name="lanche" value="Se alimentou bem">
+    <label for="lanche">Se alimentou bem</label>
+        </p>
+
+        <p>
+        <input type="radio" class="form-check-input " name="lanche" value="Se alimentou moderadamente">
+    <label for="lanche">Se alimentou moderadamente</label>
+        </p>
+
+        <p>
+        <input type="radio" class="form-check-input " name="lanche" value="Se alimentou pouco">
+    <label for="lanche">Se alimentou pouco</label>
+        </p>
+    </fieldset>
+
+    
+<fieldset>
+    <legend>Banheiro:</legend>
+    <input type="checkbox" class="form-check-input"  name="xixi" id="xixi" value="sim">
+    <label for="xixi">Xixi</label><br>
+    <label class="form-label" for="quantxixi">Quantas vezes?</label>
+    <input class="form-control" style="width: 4rem;" type="number" name="quantxixi" id="quantxixi" value="{{agenda.quantxixi}}" disabled>
+<br>
+    <input type="checkbox" class="form-check-input " name="coco" id="coco" value="sim">
+    <label for="coco">Cocô</label><br>
+    <label class="form-label" for="quantcoco">Quantas vezes?</label>
+    <input class="form-control" style="width: 4rem;" type="number" name="quantcoco" id="quantcoco" value="{{agenda.quantcoco}}" disabled>
+</fieldset>
+
+    
+
+<label for="observacao">Observações do dia:</label>
+<textarea name="observacao" id="" cols="20" rows="10" class="text-field">{{agenda.observacao}}</textarea>
+
+    <button type="submit" class="btn btn-success">Salvar agenda</button>
+</form>
+
+
+</div>
+</div>

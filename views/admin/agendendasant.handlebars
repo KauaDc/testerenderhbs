@@ -1,0 +1,19 @@
+<h1>Agendas do(a) {{aluno.nome}}</h1>
+<hr>
+{{#each agenda}}
+<div class="card bg-transparent">
+    <div class="card-body ">
+    <p>{{data}}</p>
+    <a href="/admin/agendacompleta/{{_id}}"> <button class="btn btn-success">Ver Agenda</button></a>
+    <a href="/admin/agendaedit/{{_id}}"> <button class="btn btn-success">Editar Agenda</button></a>
+        <form action="/admin/agendadeletar" method="POST">
+                <input type="hidden" name="id" value="{{_id}}">
+                <button type="submit" class="btn btn-danger mt-2   "  >Deletar agenda</button>
+            </form>    </div>
+</div>
+
+
+{{else}}
+<h1>Ainda não há nenhuma agenda</h1>
+
+{{/each}}

@@ -1,0 +1,22 @@
+<h1>Atividades Extras do(a) {{aluno.nome}}</h1>
+
+<input type="hidden" name="id" value="{{aluno.responsavel}}">
+<hr>
+
+
+{{#each atividade}}
+  <div class="col-sm-6">
+    <div class="card mt-1">
+      <div class="cardPers">
+        <p class="card-text">{{Atividade}}</p>
+      </div>
+    </div>
+  </div>
+
+
+
+{{else}}
+<h1>Ainda não há nenhuma atividade registrada</h1>
+{{/each}}
+
+  

@@ -1,0 +1,45 @@
+<h3>Editar Informaçoes:</h3>
+<div class="cardPers">
+    <div class="card-body">
+<form action="/admin/alunoedit" method="POST">
+<input type="hidden" name="id" value="{{aluno._id}}">
+
+    <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" value="{{aluno.nome}}" placeholder="Nome do aluno" class="form-control">
+
+    <label for="idade">Idade:</label>
+        <input type="number" name="idade" id="idade" value="{{aluno.idade}}" placeholder="Idade do aluno" class="form-control">
+     
+    <label for="responsavel">Responsavel:</label>
+        <select name="responsavel" class="form-select" >
+            {{#if responsavel}}
+            <option value="{{responsavel._id}}">{{responsavel.nome}}</option>
+            {{#each resp}}
+            <option  value="{{_id}}">{{nome}}</option>
+            {{else}}
+            <option value="0">Nenhum responsavel registrado</option>
+            {{/each}}
+            {{/if}}
+     </select>
+
+
+     <label for="contato ">Contato do responsavel:</label>
+        <input type="text" value="{{aluno.contatoresp}}" name="contato" id="contato" placeholder="Contato do responsavel" class="form-control">
+
+
+        <label for="alergias">Alergias:</label>
+        <input value="{{aluno.alergias}}" type="text"class="form-control" placeholder="Alergias" name="alergias">
+
+    <label for="turma">Turma:</label>
+        <select name="turma" class="form-select">
+            {{#each turmas}}
+            <option value="{{_id}}">{{nome}}</option>
+            {{else}}
+            <option value="0">Nenhuma turma registrada</option>
+            {{/each}}
+        </select>
+
+    <button type="submit" class="btn btn-success mt-4">Editar informaçoes</button>
+</form>
+</div>
+</div>

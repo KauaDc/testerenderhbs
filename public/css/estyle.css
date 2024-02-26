@@ -1,0 +1,162 @@
+/*background img*/
+body{
+    background-image: url('/img/Login_PC.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+.fonte_login{
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+}
+
+.semFundo{
+    background-color: rgba(0, 255, 255, 0);
+}
+
+
+.cardPers {
+    margin: 0 auto;
+    
+    
+    width: 300px;
+    padding: 1.9rem 1.2rem;
+    text-align: center;
+    background: #2a2b3800;
+   }
+.cardAgenda {
+    margin: 0 auto;
+    width: 700px;
+   
+   }
+
+.cardAgenda input{
+border-radius: 5px;
+}
+.cardAgenda textarea{
+    border-radius: 5px;
+}
+   /*Inputs*/
+   .field {
+    margin-top: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+    background-color: #1f2029;
+    border-radius: 4px;
+    padding: .5em 1em;
+   }
+   
+   .input-icon {
+    height: 1em;
+    width: 1em;
+    fill: #ffeba7;
+   }
+   
+   .input-field {
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #d3d3d3;
+   }
+   .input-fieldAgenda {
+    border: none;
+    outline: none;
+    width: 50%;
+    background-color: #ffffff;
+   }
+   .text-field {
+    background-color: #ffffff;
+    width: 77%;
+    color: #000000;
+   }
+   
+   /*Text*/
+   .title {
+    margin-bottom: 1rem;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #f5f5f5;
+   }
+   
+   /*Buttons*/
+   .btnPers {
+    margin: 1rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: .8em;
+    text-transform: uppercase;
+    padding: 0.6em 1.2em;
+    background-color: #ffeba7;
+    color: #5e6681;
+    box-shadow: 0 8px 24px 0 rgb(255 235 167 / 20%);
+    transition: all .3s ease-in-out;
+   }
+   
+   .btn-link {
+    color: #f5f5f5;
+    display: block;
+    font-size: .75em;
+    transition: color .3s ease-out;
+   }
+   
+   /*Hover & focus*/
+   .field input:focus::placeholder {
+    opacity: 0;
+    transition: opacity .3s;
+   }
+   
+   .btn:hover {
+    background-color: #5e6681;
+    color: #ffeba7;
+    box-shadow: 0 8px 24px 0 rgb(16 39 112 / 20%);
+   }
+   
+   .btn-link:hover {
+    color: #ffeba7;
+   }
+.lista{
+  display: flex;
+    flex-direction: column;
+}
+.lista .field{
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    background-color: #1f2029;
+    border-radius: 4px;
+    padding: 0.5em 1em;
+}
+
+
+
+
+   @media (max-width: 768px) {
+
+    body{
+        background-image: url('/img/Logo_Cel2.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .input-fieldAgenda{
+        width: 75%;
+    }
+    .cardAgenda{
+        background-color: rgba(0, 128, 0, 0);
+        width: 100%;
+        height: 42.5rem;
+    }
+   .text-field {
+    width: 100%;
+    height: 24rem;
+   }
+   }

@@ -1,0 +1,20 @@
+
+<div class="card bg-transparent" style="width: 100%;">
+  <div class="card-header ">
+    <h1>{{turma.nome}}</h1>
+  </div>
+  {{#each alunos}}
+  <ul class="list-group list-group-flush ">
+    <li class="list-group-item bg-transparent"><h1>{{nome}}</h1>  
+    <a href="/admin/alunoinfo/{{_id}}"> <button class="btn btn-success bg-primary">Informaçoes</button></a>
+    <a href="/admin/agendas/{{_id}}"> <button class="btn btn-success"> Agenda</button></a>
+    <a href="/admin/agendendasant/{{nome}}"> <button class="btn btn-success">Agendas anteriores</button></a>
+</li>
+    
+    {{else}}
+        <p>Sem Alunos para listar</p>
+{{/each}}
+
+  </ul>
+</div>
+

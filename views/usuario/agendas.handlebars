@@ -1,0 +1,22 @@
+
+
+
+<h1>Agendas do(a) {{aluno.nome}}</h1>
+
+<input type="hidden" name="id" value="{{aluno.responsavel}}">
+
+
+<hr>
+{{#each agenda}}
+<div class="card bg-transparent">
+    <div class="card-body">
+    <p>{{data}}</p>
+    <a href="/agendacompleta/{{_id}}"> <button class="btn btn-success">Ver Agenda</button></a>
+    </div>
+</div>
+
+
+{{else}}
+<h1>Ainda não há nenhuma agenda registrada</h1>
+{{/each}}
+

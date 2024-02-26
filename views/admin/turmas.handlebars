@@ -1,0 +1,20 @@
+<div class="card bg-transparent">
+    <div class="card-body">
+        <h1>TURMAS</h1>
+        <hr>
+        {{#each turmas}}
+       <div class="card mt-4 bg-transparent">
+        <div class="card-body ">
+        <h1>{{nome}}</h1>
+
+            <a href="/admin/turma/{{_id}}"> <button class="btn btn-success bg-primary">Informaçoes</button></a>
+       
+        </div>
+        </div>
+        {{else}}
+
+        {{/each}}
+                <a href="/admin/addturmas"> <button class="btn btn-success mt-4">Adicionar nova turma</button></a>
+
+    </div>
+ </div>

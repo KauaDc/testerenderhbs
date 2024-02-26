@@ -1,0 +1,40 @@
+<h3>Novo Aluno(a):</h3>
+<div class="cardPers">
+    <div class="card-body ">
+<form action="/admin/aluno/novo" method="POST">
+    <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" placeholder="Nome do aluno" class="form-control">
+
+    <label for="idade">Idade:</label>
+        <input type="number" name="idade" id="idade" placeholder="Idade do aluno" class="form-control">
+     
+    <label for="responsavel">Responsavel:</label>
+        <select name="responsavel" class="form-select">
+            {{#each resp}}
+            <option value="{{_id}}">{{nome}}</option>
+            {{else}}
+            <option value=" ">Nenhum responsavel registrado</option>
+            {{/each}}
+   </select>
+
+
+        <label for="contato">Contato do responsavel:</label>
+        <input type="text" name="contato" id="contato" placeholder="Contato do responsavel" class="form-control">
+
+
+        <label for="alergias">Alergias:</label>
+        <input type="text"class="form-control" placeholder="Alergias" name="alergias">
+
+    <label for="turma">Turma:</label>
+        <select name="turma" class="form-select">
+            {{#each turmas}}
+            <option value="{{_id}}">{{nome}}</option>
+            {{else}}
+            <option value="0">Nenhuma turma registrada</option>
+            {{/each}}
+        </select>
+
+    <button type="submit" class="btn btn-success mt-4">cadastrar aluno(a)</button>
+</form>
+</div>
+</div>

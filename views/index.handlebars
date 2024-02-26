@@ -1,0 +1,43 @@
+{{#if user}}
+<div class="jumbotron">
+  <h1 class="display-4">Bem vindo ao Sonho Encantado {{user.nome}}</h1>
+  <p class="lead">Aqui Você pode Vericar a agenda</p>
+</div>
+
+{{#each aluno}}
+<div class="card bg-transparent">
+    <div class="card-body ">
+<h1>Agendas do(a) {{nome}}</h1>
+<input type="hidden" name="id" value="{{responsavel}}">
+<a href="/agendas/{{_id}}"> <button class="btn btn-success">Ver Agenda</button></a>
+    </div>
+<div class="card-body">
+      <h1>Atividades Extracurriculares</h1>
+      <input type="hidden" name="id" value="{{responsavel}}">
+     <a href="/atividades/{{_id}}"> <button class="btn btn-success">Ir</button></a> 
+    </div>
+</div>
+
+
+{{/each}}
+    
+<script src="../client.js"></script>
+
+
+
+
+
+
+{{else}}
+<div class="jumbotron fonte_login">
+  <h1 class="display-4">Bem vindo ao Sonho Encantado</h1>
+  <p class="lead">Você precisa efetuar o login para visualizar o conteudo</p>
+  <hr class="my-4">
+  <p>caso ainda nâo possua login entre em contato pelo whatssap:</p>
+     <p class="lead">
+  <a class="btn btn-primary btn-lg" href="/usuario/login" role="button">Faça login</a>
+    </p>
+</div>
+
+{{/if}}
+

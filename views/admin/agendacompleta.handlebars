@@ -1,0 +1,37 @@
+<form>
+  <fieldset  class="cardAgenda" disabled>
+    <legend class="fonte"><h1>Agenda do dia: {{agenda.data}}</h1></legend>
+    <div class="mb-2">
+         <label for="disabledTextInput" class="form-label"><h3>Café da manha:</h3></label>
+            <input type="text" id="disabledTextInput" style="font-size: larger;" class="input-fieldAgenda" placeholder="{{agenda.cafe}}">
+    </div>
+
+      <div class="mb-2">
+         <label for="disabledTextInput" class="form-label"><h3>Almoço:</h3></label>
+            <input type="text" id="disabledTextInput"style="font-size: larger;" class="input-fieldAgenda" placeholder="{{agenda.almoco}}">
+      </div>
+   
+   <div class="mb-2">
+       <label for="disabledTextInput" class="form-label"><h3>Frutas:</h3></label>
+           <input type="text" id="disabledTextInput"style="font-size: larger;" class="input-fieldAgenda" placeholder="{{agenda.fruta}}">
+   </div>
+   <div class="mb-2">
+       <label for="disabledTextInput" class="form-label"><h3>Lanche:</h3></label>
+           <input type="text" id="disabledTextInput"style="font-size: larger;" class="input-fieldAgenda" placeholder="{{agenda.lanche}}">
+   </div>
+
+   <div class="mb-2">
+       <label for="disabledTextInput" class="form-label"><h3>Banheiro:</h3></label>
+        <input type="text" id="disabledTextInput"style="font-size: larger;" class="input-fieldAgenda mb-1" placeholder="Fez xixi? {{agenda.xixi}}{{#if agenda.quantxixi includezero=true}}, quantas vezes? {{agenda.quantxixi}} {{else}} {{/if}}">       
+        <input type="text" id="disabledTextInput"style="font-size: larger;" class="input-fieldAgenda " placeholder="Fez coco? {{agenda.coco}}{{#if agenda.quantcoco includezero=true}}, quantas vezes? {{agenda.quantcoco}} {{else}} {{/if}}">
+   </div>
+
+   <div class="mb-2">
+        <textarea disabled name="" class="input-fieldAgenda" id="" cols="30" rows="10">{{agenda.observacao}}</textarea>
+   </div>   
+
+
+    
+
+  </fieldset>
+</form>

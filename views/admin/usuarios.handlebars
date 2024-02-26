@@ -1,0 +1,19 @@
+<div class="card bg-transparent">
+    <div class="card-body">
+        {{#each usuarios}}
+        <div class="card bg-transparent">
+        <h1>{{nome}}</h1>
+                <form action="/usuario/usuariodeletar" method="POST">
+                <input type="hidden" name="id" value="{{_id}}">
+
+                <button type="submit" class="btn btn-danger position-absolute top-50 end-0 translate-middle" style="" disabled>Deletar usuario</button>
+            </form>
+
+        </div>
+    <br>    
+    {{else}}
+
+        {{/each}}
+        <a href="/usuario/usuarios/novo"><button class="btn btn-success">Adicionar usuario</button></a>
+    </div>
+</div>

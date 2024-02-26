@@ -1,0 +1,24 @@
+<h1>Atividades Extras do(a) {{aluno.nome}}</h1>
+<a href="/admin/addatividade/{{aluno._id}}"><button class="btn btn-success">Adicionar nova atividade</button></a>
+<input type="hidden" name="id" value="{{aluno.responsavel}}">
+<hr>
+
+{{!-- {{reverse list}} --}}
+
+{{#each  atividade  }}
+  <div class="col-sm-6">
+    <div class="card mt-1">
+      <div class="cardPers">
+        <p class="card-text">{{Atividade}}</p>
+        
+      </div>
+    </div>
+  </div>
+
+
+
+{{else}}
+<h1>Ainda não há nenhuma atividade registrada</h1>
+{{/each}}
+
+  

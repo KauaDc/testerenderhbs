@@ -1,0 +1,29 @@
+<div class="card bg-transparent">
+        <a href="/admin/addalunos"> <button class="btn btn-success mt-4">Adicionar novo aluno</button></a>
+    <div class="card-body ">
+        <h1>ALUNOS</h1>
+        {{#each alunos}}
+        <div class="card mt-4 bg-transparent">
+        <div class="card-body ">
+        <h1>{{nome}}</h1>
+        <div class="d-flex  flex-wrap justify-content-around ">
+
+
+            <a href="/admin/agendas/{{_id}}"> <button class="btn btn-success mt-4">Agenda</button></a>
+            <a href="/admin/agendendasant/{{nome}}"> <button class="btn btn-success  mt-4">Agendas anteriores</button></a>
+            <a href="/admin/atividadesextras/{{_id}}"> <button class="btn btn-success  mt-4" >Atividades Extracurriculares</button></a>
+            <a href="/admin/alunoinfo/{{_id}}"> <button class="btn btn-success bg-primary  mt-4">Informaçoes</button></a>
+            <a href="/admin/aluno/edit/{{_id}}"> <button class="btn btn-success bg-primary  mt-4">edit</button></a>
+
+        <form action="/admin/alunodeletar" method="POST">
+                <input type="hidden" name="id" value="{{_id}}">
+                <button type="submit" class="btn btn-danger  mt-4" disabled>Deletar aluno</button>
+            </form>
+        </div>
+            
+        </div>
+        </div>
+        {{else}}
+        {{/each}}
+    </div>
+ </div>
